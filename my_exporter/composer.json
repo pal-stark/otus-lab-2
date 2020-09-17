@@ -1,0 +1,6 @@
+{
+    "require": {
+        "endclothing/prometheus_client_php": "^1.0",
+        "youngj/httpserver": "^1.0"
+    }
+}
