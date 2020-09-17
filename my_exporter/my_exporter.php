@@ -5,7 +5,6 @@ require __DIR__ . '/vendor/autoload.php';
 use Prometheus\CollectorRegistry;
 use Prometheus\RenderTextFormat;
 use Prometheus\Storage\Redis;
-use HTTPServer;
 
 class PvsExporter extends HTTPServer {
 
@@ -43,7 +42,7 @@ class PvsExporter extends HTTPServer {
             $result = "<h1>Pvs Exporter!</h1>";
             $result .= "<a href='/metrics'>Metrics</a>";
         }
-        return $this->response('200', $result);
+        return $this->response('200', $result, array('Content-Type' => 'text/plain; version=0.0.4; charset=utf-8'));
     }
 
 }
